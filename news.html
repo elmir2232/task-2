@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Artickles</title>
+</head>
+
+<body>
+    <div class="container-mainPage">
+        <header class="header">
+            <div class="js-header__err"></div>
+            <button class="btn btn-addNew admin js-btn-addNew">
+                <span data-tip="add news"></span>
+            </button>
+            <button class="btn btn-logOut">
+                <a class="js-logOut">logout</a>
+            </button>
+        </header>
+        <h1>NEWS</h1>
+        <section class="content">
+            <div id="articles" class="articles js-articles"></div>
+        </section>
+        <div class="overlay fade js-overlay">
+            <div class="popup">
+                <div class="popup-close js-popup-close"><i class="icon icon-closePopup"></i></div>
+                <div class="popup-article">
+                    <h2>Title</h2>
+                    <input name="header" class="popup-article-header article-header js-popup-article-header" >
+                    <h2>Content</h2>
+                    <textarea name="content" class="popup-article-content article-content js-popup-article-content"></textarea>
+                </div>
+                <button class="btn btn-articleSave js-btn-articleSave ">Save</button>
+                <button class="btn btn-articleSave btn-edit js-btn-edit">Edit</button>
+            </div>
+        </div>
+    </div>
+   
+    <script src="js/news.js"></script>
+</body>
+
+</html>

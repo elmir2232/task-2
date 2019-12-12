@@ -1,0 +1,222 @@
+@import '_variables';
+
+.container-mainPage{
+    width: 90%;
+    margin: 0 auto;
+}
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top:20px;
+    
+}
+h1{
+    text-align: center;
+    font-weight: 800;
+    font-size: 40px;
+}
+
+.btn{
+    border:none;
+    background: none;
+    padding:0px 0px; 
+    margin-left: 10px;
+    &-addNew{
+        display: block;
+        height: 40px;
+        width: 40px;
+        position:relative;
+     
+        &:before{
+            content:'';
+            position:absolute;
+            width: 20px;
+            height: 4px;
+            top:50%;
+            left:50%;
+            margin-top:-2px;
+            margin-left:-10px;
+            background:black;
+        }
+        &:after{
+            content:'';
+            position:absolute;
+            width: 4px;
+            height: 20px;
+            top:50%;
+            left:50%;
+            margin-top:-10px;
+            margin-left:-2px;
+            background: $itemsColor;
+        }
+        & span{
+            display: block;
+            height:100%;
+            position: relative;
+            &:hover{
+                &:before{
+                    content: attr(data-tip);
+                    position:absolute;
+                    display: block;
+                    color:$dark;
+                    width:100px;
+                    padding: 5px 0px;
+                    border-radius:5px;
+                    background: $articleCnt;
+                    left:130%;
+                    top:-3px;
+                   
+                }
+                &:after{
+                    content: "";
+                    position: absolute;
+                    width: 0px;
+                    height: 0px;
+                    border-top:10px solid transparent;
+                    border-bottom:10px solid transparent;
+                    border-right:10px solid $articleCnt;
+                    left:107%;
+                    top:50%;
+                    margin-top:-10px;
+                    
+                }
+            }
+        }
+    }
+    &-logOut{
+        a{
+            display: block;
+            color:$itemsColor;
+            background: $action;
+            padding:5px 10px;
+            border-radius:10px;
+            text-decoration:none;
+        }
+    }
+} 
+.overlay{
+    position:fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+  
+}
+.fade{
+    background:$overlay;
+ 
+}
+.popup{
+    width:500px;
+    position:relative;
+    padding: 27px 20px 20px 10px;
+    background: $action;
+    border-radius:10px;
+ 
+    transform-origin: center bottom;
+    &-close{
+        color:$itemsColor;
+        position:absolute;
+        top:5px;
+        right:5px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &-article{
+        display: flex;
+        flex-direction: column;
+        color:$itemsColor;
+        font-size: 14px;
+        &-header{
+            margin-bottom:20px;
+        }
+        &-content{
+            margin-bottom:20px;
+        }
+        h2{
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+}
+.btn-articleSave{
+    padding:5px 10px;
+    border-radius:5px;
+    background: $articleCnt;
+    color:$itemsColor;
+    font-weight:500;
+ 
+   
+}
+.btn-edit{
+    display:none;
+}
+.content{
+    display:flex;
+    justify-content: center;
+    padding-top:20px;
+}
+.articles{
+    width: 50%;
+}
+
+.article{ 
+    position:relative;
+    margin-bottom:30px;
+    background: $action;
+    color:$dark;
+    padding:10px;
+    border-radius:15px;
+    &-header,&-content{
+        display: block;
+        border:none;
+        border-radius:5px;
+    }
+    &-header{
+        background: $articleHeader;
+        text-align: center;
+        font-size: 18px;
+        color:$itemsColor;
+        padding:5px 0px;
+        margin-bottom:5px;
+    }
+    &-content{
+        background: $articleCnt;
+        padding: 5px;
+        font-weight:500;
+        color:$itemsColor;
+        
+        &::placeholder{
+            color:$dark;
+        }
+    }
+    &-action{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 7px;
+        color:$itemsColor;
+        background:$action;
+        width: 50px;
+        top:0;
+        bottom:0;
+        right:0;
+        border-radius:5px;
+        font-size: 16px;
+        & i{
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    &--show{
+        display: block;
+    }
+}

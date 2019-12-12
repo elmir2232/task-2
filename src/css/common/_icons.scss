@@ -1,0 +1,42 @@
+@font-face {
+	font-family: "icons";
+	src: url('src/assets/fonts/icons.eot');
+	src: url('src/assets/fonts/icons.eot?#iefix') format('eot'),
+		url('src/assets/fonts/icons.woff2') format('woff2'),
+		url('src/assets/fonts/icons.woff') format('woff'),
+		url('src/assets/fonts/icons.ttf') format('truetype'),
+		url('src/assets/fonts/icons.svg#icons') format('svg');
+}
+
+.icon:before {
+	font-family: "icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+	text-transform: none;
+}
+
+
+.icon-closePopup:before {
+	content: "\E001";
+}
+
+.icon-deleteArticle:before {
+	content: "\E002";
+}
+
+.icon-lock:before {
+	content: "\E003";
+}
+
+.icon-pen:before {
+	content: "\E004";
+}
+
+.icon-user:before {
+	content: "\E005";
+}
